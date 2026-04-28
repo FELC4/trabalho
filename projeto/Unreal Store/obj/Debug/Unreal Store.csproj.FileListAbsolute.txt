@@ -1,0 +1,11 @@
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\bin\Debug\Unreal Store.exe.config
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\bin\Debug\Unreal Store.exe
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\bin\Debug\Unreal Store.pdb
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.csproj.AssemblyReference.cache
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Properties.Resources.resources
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.csproj.GenerateResource.cache
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.csproj.CoreCompileInputs.cache
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.exe
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.pdb
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.exe.config
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Form1.resources

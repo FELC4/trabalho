@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form3.cs [Design]",
+              "RelativeToolTip": "Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:26:49.879Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:20:05.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "Form2.Designer.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.Designer.cs",
+              "RelativeToolTip": "Form2.Designer.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:19:52.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountStore.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\AccountStore.cs",
+              "RelativeDocumentMoniker": "AccountStore.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\AccountStore.cs",
+              "RelativeToolTip": "AccountStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:19:31.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs [Design]",
+              "RelativeToolTip": "Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:16:34.173Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:11:50.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwEwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T08:41:25.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T08:11:36.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T08:04:29.324Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
