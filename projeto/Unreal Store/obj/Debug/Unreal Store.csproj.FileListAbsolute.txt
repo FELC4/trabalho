@@ -9,3 +9,6 @@ C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.pdb
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.exe.config
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Form1.resources
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Form2.resources
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Form3.resources
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal_Store.Form4.resources
