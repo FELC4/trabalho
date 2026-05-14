@@ -66,5 +66,15 @@ namespace Unreal_Store
         {
             // placeholder existente (Atualizar) — manter ou implementar lógica
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
