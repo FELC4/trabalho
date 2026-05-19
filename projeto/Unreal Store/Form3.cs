@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unreal_Store;
+using System.Linq;
 
 namespace Unreal_Store
 {
@@ -15,64 +11,102 @@ namespace Unreal_Store
         public Form3()
         {
             InitializeComponent();
+
+            panelNavStore.Click += NavStore_Click;
+            lblStoreIcon.Click += NavStore_Click;
+            lblStoreText.Click += NavStore_Click;
+
+            panelNavLibrary.Click += NavLibrary_Click;
+            lblLibraryIcon.Click += NavLibrary_Click;
+            lblLibraryText.Click += NavLibrary_Click;
+
+            panelNavEngine.Click += NavEngine_Click;
+            lblEngineIcon.Click += NavEngine_Click;
+            lblEngineText.Click += NavEngine_Click;
+
+            SelectNav("Loja");
         }
 
-        // Método ligado pelo Designer ao botão "Definições" (button4).
-        private void button4_Click(object sender, EventArgs e)
+        private void bottomDot_Paint(object sender, PaintEventArgs e)
+        {
+            var g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            var rc = (sender as Control)?.ClientRectangle ?? new Rectangle(0, 0, 16, 16);
+            var cx = rc.Width / 2;
+            var cy = rc.Height / 2;
+            var r = Math.Min(rc.Width, rc.Height) / 4;
+            using (var brush = new SolidBrush(Color.FromArgb(64, 184, 255)))
+            {
+                g.FillEllipse(brush, cx - r, cy - r, r * 2, r * 2);
+            }
+        }
+
+        private void bottomDot_Click(object sender, EventArgs e)
         {
             using (var f4 = new Form4())
             {
-                // Esconder Form3 enquanto as definições estão abertas
                 this.Hide();
-
-                var result = f4.ShowDialog(this);
-
-                // Se o utilizador escolheu Logout, reexibir (ou criar) Form1 e fechar Form3
-                if (result == DialogResult.OK && f4.IsLogout)
-                {
-                    var f1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-                    if (f1 != null)
-                    {
-                        // Garantir que Form1 fica visível e em primeiro plano
-                        if (!f1.Visible) f1.Show();
-                        f1.WindowState = FormWindowState.Normal;
-                        try
-                        {
-                            f1.BringToFront();
-                            f1.Activate();
-                        }
-                        catch { /* não fatal se falhar */ }
-                    }
-                    else
-                    {
-                        // Caso improvável: criar nova instância de Form1
-                        var newF1 = new Form1();
-                        newF1.Show();
-                    }
-
-                    // Fechar Form3 para completar o logout
-                    this.Close();
-                    return;
-                }
-
-                // Caso o utilizador simplesmente fechou Form4 sem fazer logout,
-                // reexibir Form3 (se ainda não estiver disposed)
+                f4.ShowDialog(this);
                 if (!this.IsDisposed)
                     this.Show();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NavStore_Click(object sender, EventArgs e) => SelectNav("Loja");
+        private void NavLibrary_Click(object sender, EventArgs e) => SelectNav("Biblioteca");
+        private void NavEngine_Click(object sender, EventArgs e) => SelectNav("Atualizar");
+
+        private void SelectNav(string key)
         {
-            // placeholder existente (Atualizar) — manter ou implementar lógica
+        
+            panelNavStore.BackColor = Color.FromArgb(22, 22, 22);
+            lblStoreText.ForeColor = Color.LightGray;
+            lblStoreIcon.ForeColor = Color.LightGray;
+
+            panelNavLibrary.BackColor = Color.FromArgb(22, 22, 22);
+            lblLibraryText.ForeColor = Color.LightGray;
+            lblLibraryIcon.ForeColor = Color.LightGray;
+
+            panelNavEngine.BackColor = Color.FromArgb(22, 22, 22);
+            lblEngineText.ForeColor = Color.LightGray;
+            lblEngineIcon.ForeColor = Color.LightGray;
+
+            if (key == "Loja")
+            {
+                panelNavStore.BackColor = Color.FromArgb(48, 48, 48);
+                lblStoreText.ForeColor = Color.White;
+                lblStoreIcon.ForeColor = Color.White;
+                mainContentLabel.Text = "Loja";
+            }
+            else if (key == "Biblioteca")
+            {
+                panelNavLibrary.BackColor = Color.FromArgb(48, 48, 48);
+                lblLibraryText.ForeColor = Color.White;
+                lblLibraryIcon.ForeColor = Color.White;
+                mainContentLabel.Text = "Biblioteca";
+            }
+            else if (key == "Atualizar")
+            {
+                panelNavEngine.BackColor = Color.FromArgb(48, 48, 48);
+                lblEngineText.ForeColor = Color.White;
+                lblEngineIcon.ForeColor = Color.White;
+                mainContentLabel.Text = "Atualizar";
+            }
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) { /* placeholder */ }
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            using (var f4 = new Form4())
+            {
+                this.Hide();
+                f4.ShowDialog(this);
+                if (!this.IsDisposed)
+                    this.Show();
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
