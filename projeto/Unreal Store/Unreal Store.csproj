@@ -87,18 +87,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -109,49 +109,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\The_Last_of_Us_Part_I.png" />
+    <None Include="Resources\jogoAcao.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\The_Last_of_Us_Part_I %281%29.png" />
+    <None Include="Resources\jogoExploracao.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\The_Last_of_Us_Part_I %282%29.png" />
+    <None Include="Resources\pac2d.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\7df98bfcc587fcf296f7c3bf0741a733 %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minecraft_capa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minecraft_capa %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minecraft_capa %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cb6290ec436941da956f4a6080a29d22 %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cb6290ec436941da956f4a6080a29d22 %282%29 %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cb6290ec436941da956f4a6080a29d22 %282%29 %281%29 %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cb6290ec436941da956f4a6080a29d22 %282%29 %281%29 %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Five-Nights-at-Freddys-For-the-Fans-scaled %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Five-Nights-at-Freddys-For-the-Fans-scaled %281%29 %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Albion_Online.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Albion_Online %281%29.jpg" />
+    <Content Include="Resources\multijogador.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- No <data> entries here — avoids missing-file errors.
+       To add images back, use Visual Studio: Project > Properties > Resources and Add Existing File.
+       That will update this .resx and embed correct references. -->
+</root>
   <!-- 
     Microsoft ResX Schema 
     
@@ -118,49 +183,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Minecraft_capa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minecraft_capa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  
+  
+	
+  <data name="jogoExploracao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jogoExploracao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cb6290ec436941da956f4a6080a29d22 (2) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cb6290ec436941da956f4a6080a29d22 (2) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  
+  <data name="jogoAcao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jogoAcao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Last_of_Us_Part_I (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The_Last_of_Us_Part_I (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  
+  <data name="pac2d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pac2d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Minecraft_capa (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minecraft_capa (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cb6290ec436941da956f4a6080a29d22 (2) (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cb6290ec436941da956f4a6080a29d22 (2) (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7df98bfcc587fcf296f7c3bf0741a733 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7df98bfcc587fcf296f7c3bf0741a733 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Last_of_Us_Part_I (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The_Last_of_Us_Part_I (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Albion_Online" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Albion_Online.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cb6290ec436941da956f4a6080a29d22 (2) (1) (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cb6290ec436941da956f4a6080a29d22 (2) (1) (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Five-Nights-at-Freddys-For-the-Fans-scaled (1) (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Five-Nights-at-Freddys-For-the-Fans-scaled (1) (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minecraft_capa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minecraft_capa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Five-Nights-at-Freddys-For-the-Fans-scaled (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Five-Nights-at-Freddys-For-the-Fans-scaled (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cb6290ec436941da956f4a6080a29d22 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cb6290ec436941da956f4a6080a29d22 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Last_of_Us_Part_I" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The_Last_of_Us_Part_I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Albion_Online (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Albion_Online (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  
+  <data name="multijogador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multijogador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

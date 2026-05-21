@@ -63,9 +63,9 @@ namespace Unreal_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7df98bfcc587fcf296f7c3bf0741a733__1_ {
+        internal static System.Drawing.Bitmap jogoAcao {
             get {
-                object obj = ResourceManager.GetObject("7df98bfcc587fcf296f7c3bf0741a733 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("jogoAcao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Unreal_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Albion_Online {
+        internal static System.Drawing.Bitmap jogoExploracao {
             get {
-                object obj = ResourceManager.GetObject("Albion_Online", resourceCulture);
+                object obj = ResourceManager.GetObject("jogoExploracao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Unreal_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Albion_Online__1_ {
+        internal static System.Drawing.Bitmap multijogador {
             get {
-                object obj = ResourceManager.GetObject("Albion_Online (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("multijogador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,119 +93,9 @@ namespace Unreal_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cb6290ec436941da956f4a6080a29d22__1_ {
+        internal static System.Drawing.Bitmap pac2d {
             get {
-                object obj = ResourceManager.GetObject("cb6290ec436941da956f4a6080a29d22 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cb6290ec436941da956f4a6080a29d22__2___1_ {
-            get {
-                object obj = ResourceManager.GetObject("cb6290ec436941da956f4a6080a29d22 (2) (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cb6290ec436941da956f4a6080a29d22__2___1___1_ {
-            get {
-                object obj = ResourceManager.GetObject("cb6290ec436941da956f4a6080a29d22 (2) (1) (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cb6290ec436941da956f4a6080a29d22__2___1___2_ {
-            get {
-                object obj = ResourceManager.GetObject("cb6290ec436941da956f4a6080a29d22 (2) (1) (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Five_Nights_at_Freddys_For_the_Fans_scaled__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Five-Nights-at-Freddys-For-the-Fans-scaled (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Five_Nights_at_Freddys_For_the_Fans_scaled__1___2_ {
-            get {
-                object obj = ResourceManager.GetObject("Five-Nights-at-Freddys-For-the-Fans-scaled (1) (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Minecraft_capa {
-            get {
-                object obj = ResourceManager.GetObject("Minecraft_capa", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Minecraft_capa__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Minecraft_capa (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Minecraft_capa__2_ {
-            get {
-                object obj = ResourceManager.GetObject("Minecraft_capa (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap The_Last_of_Us_Part_I {
-            get {
-                object obj = ResourceManager.GetObject("The_Last_of_Us_Part_I", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap The_Last_of_Us_Part_I__1_ {
-            get {
-                object obj = ResourceManager.GetObject("The_Last_of_Us_Part_I (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap The_Last_of_Us_Part_I__2_ {
-            get {
-                object obj = ResourceManager.GetObject("The_Last_of_Us_Part_I (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("pac2d", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
