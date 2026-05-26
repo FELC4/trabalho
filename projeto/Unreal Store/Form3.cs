@@ -98,12 +98,9 @@ namespace Unreal_Store
             mainContentPanel.Controls.Add(new Label() { Text = "Os seus jogos aparecerão aqui.", ForeColor = Color.LightGray, Location = new Point(20, 60), AutoSize = true });
         }
 
-        // show Atualizar UI with add-funds option
         private void ShowUpdate()
         {
-            // hide store controls
             foreach (var c in storeControls) c.Visible = false;
-            // remove previous update controls
             foreach (var c in updateControls) if (mainContentPanel.Controls.Contains(c)) mainContentPanel.Controls.Remove(c);
 
             panelNavStore.BackColor = Color.FromArgb(22, 22, 22);
@@ -135,12 +132,10 @@ namespace Unreal_Store
 
                 if (string.IsNullOrWhiteSpace(currentUsername))
                 {
-                    // anonymous/session wallet
                     sessionBalance += amount;
                 }
                 else
                 {
-                    // persist for authenticated user
                     AccountStore.AddFunds(currentUsername, amount);
                 }
 
@@ -148,7 +143,6 @@ namespace Unreal_Store
                 MessageBox.Show($"Foram adicionados {amount.ToString("C2", CultureInfo.GetCultureInfo("pt-PT"))} à carteira.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             };
 
-            // add to panel and track so we can remove later
             mainContentPanel.Controls.Add(lblInfo);
             mainContentPanel.Controls.Add(tbAmount);
             mainContentPanel.Controls.Add(btnAdd);
@@ -156,7 +150,6 @@ namespace Unreal_Store
             updateControls = new Control[] { lblInfo, tbAmount, btnAdd };
         }
 
-        // purchase: deduct funds from wallet (session or account) after confirmation
         private void GameButton_Click(object sender, EventArgs e)
         {
             decimal price = 0m;
@@ -237,4 +230,4 @@ namespace Unreal_Store
             }
         }
     }
-}
+}      
