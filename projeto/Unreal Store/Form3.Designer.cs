@@ -19,10 +19,8 @@ namespace Unreal_Store
         private System.Windows.Forms.Panel mainContentPanel;
         private System.Windows.Forms.Label mainContentLabel;
 
-        // bottomDot declared as a class field so event handlers can access it
         private System.Windows.Forms.Panel bottomDot;
 
-        // store item controls (designer-created)
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -66,26 +64,21 @@ namespace Unreal_Store
             this.lblEngineIcon = new System.Windows.Forms.Label();
             this.lblEngineText = new System.Windows.Forms.Label();
             this.bottomDot = new System.Windows.Forms.Panel();
-
             this.mainContentPanel = new System.Windows.Forms.Panel();
-            this.mainContentLabel = new System.Windows.Forms.Label();
-
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mainContentLabel = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
-
             this.panelSidebar.SuspendLayout();
             this.panelNavStore.SuspendLayout();
             this.panelNavLibrary.SuspendLayout();
@@ -95,9 +88,9 @@ namespace Unreal_Store
             // 
             // panelSidebar
             // 
-            this.panelSidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panelSidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(22, 22, 22);
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelSidebar.Controls.Add(this.panelNavStore);
             this.panelSidebar.Controls.Add(this.panelNavLibrary);
             this.panelSidebar.Controls.Add(this.panelNavEngine);
@@ -109,7 +102,7 @@ namespace Unreal_Store
             // 
             // panelNavStore
             // 
-            this.panelNavStore.BackColor = System.Drawing.Color.FromArgb(48, 48, 48);
+            this.panelNavStore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.panelNavStore.Controls.Add(this.lblStoreIcon);
             this.panelNavStore.Controls.Add(this.lblStoreText);
             this.panelNavStore.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -143,7 +136,7 @@ namespace Unreal_Store
             // 
             // panelNavLibrary
             // 
-            this.panelNavLibrary.BackColor = System.Drawing.Color.FromArgb(22, 22, 22);
+            this.panelNavLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelNavLibrary.Controls.Add(this.lblLibraryIcon);
             this.panelNavLibrary.Controls.Add(this.lblLibraryText);
             this.panelNavLibrary.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -152,6 +145,7 @@ namespace Unreal_Store
             this.panelNavLibrary.Padding = new System.Windows.Forms.Padding(16, 0, 8, 0);
             this.panelNavLibrary.Size = new System.Drawing.Size(184, 56);
             this.panelNavLibrary.TabIndex = 1;
+            this.panelNavLibrary.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNavLibrary_Paint);
             // 
             // lblLibraryIcon
             // 
@@ -177,7 +171,7 @@ namespace Unreal_Store
             // 
             // panelNavEngine
             // 
-            this.panelNavEngine.BackColor = System.Drawing.Color.FromArgb(22, 22, 22);
+            this.panelNavEngine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelNavEngine.Controls.Add(this.lblEngineIcon);
             this.panelNavEngine.Controls.Add(this.lblEngineText);
             this.panelNavEngine.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -212,7 +206,7 @@ namespace Unreal_Store
             // bottomDot
             // 
             this.bottomDot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bottomDot.BackColor = System.Drawing.Color.FromArgb(40, 40, 40);
+            this.bottomDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.bottomDot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bottomDot.Location = new System.Drawing.Point(16, 520);
             this.bottomDot.Name = "bottomDot";
@@ -223,10 +217,10 @@ namespace Unreal_Store
             // 
             // mainContentPanel
             // 
-            this.mainContentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.mainContentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainContentPanel.BackColor = System.Drawing.Color.FromArgb(28, 28, 28);
+            this.mainContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.mainContentPanel.Controls.Add(this.label9);
             this.mainContentPanel.Controls.Add(this.label8);
             this.mainContentPanel.Controls.Add(this.label7);
@@ -245,122 +239,16 @@ namespace Unreal_Store
             this.mainContentPanel.Size = new System.Drawing.Size(800, 540);
             this.mainContentPanel.TabIndex = 1;
             // 
-            // mainContentLabel
+            // label9
             // 
-            this.mainContentLabel.AutoSize = true;
-            this.mainContentLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.mainContentLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.mainContentLabel.Location = new System.Drawing.Point(20, 10);
-            this.mainContentLabel.Name = "mainContentLabel";
-            this.mainContentLabel.Size = new System.Drawing.Size(54, 30);
-            this.mainContentLabel.TabIndex = 0;
-            this.mainContentLabel.Text = "Loja";
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Unreal_Store.Properties.Resources.jogoAcao;
-            this.button1.Location = new System.Drawing.Point(25, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 250);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.GameButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::Unreal_Store.Properties.Resources.jogoExploracao;
-            this.button2.Location = new System.Drawing.Point(199, 62);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 250);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.GameButton_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::Unreal_Store.Properties.Resources.pac2d;
-            this.button3.Location = new System.Drawing.Point(373, 62);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 250);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.GameButton_Click);
-            // 
-            // button4
-            // 
-            this.button4.Image = global::Unreal_Store.Properties.Resources.multijogador;
-            this.button4.Location = new System.Drawing.Point(547, 62);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 250);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.GameButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(22, 315);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 19);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Jogo de Ação";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(196, 315);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 19);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Jogo de Exploração";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(370, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 19);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Point and Click 2D";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(544, 315);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 19);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Jogo Multi-jogador";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(21, 356);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "19,99€";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(195, 356);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 19);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "9,99€";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(544, 356);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 19);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Gratuito";
             // 
             // label8
             // 
@@ -373,32 +261,138 @@ namespace Unreal_Store
             this.label8.TabIndex = 11;
             this.label8.Text = "3,99€";
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(544, 356);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 19);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Gratuito";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(195, 356);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 19);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "9,99€";
             // 
-            // lblBalance (wallet)
+            // label6
             // 
-            this.lblBalance.AutoSize = false;
-            this.lblBalance.Text = "€0,00";
-            this.lblBalance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(21, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "19,99€";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(544, 315);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Jogo Multi-jogador";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(370, 315);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 19);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Point and Click 2D";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(196, 315);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 19);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Jogo de Exploração";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(22, 315);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 19);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Jogo de Ação";
+            // 
+            // button4
+            // 
+            this.button4.Image = global::Unreal_Store.Properties.Resources.multijogador;
+            this.button4.Location = new System.Drawing.Point(547, 62);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(168, 250);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.GameButton_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::Unreal_Store.Properties.Resources.pac2d;
+            this.button3.Location = new System.Drawing.Point(373, 62);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(168, 250);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.GameButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Unreal_Store.Properties.Resources.jogoExploracao;
+            this.button2.Location = new System.Drawing.Point(199, 62);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 250);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.GameButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Unreal_Store.Properties.Resources.jogoAcao;
+            this.button1.Location = new System.Drawing.Point(25, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 250);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.GameButton_Click);
+            // 
+            // mainContentLabel
+            // 
+            this.mainContentLabel.AutoSize = true;
+            this.mainContentLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.mainContentLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.mainContentLabel.Location = new System.Drawing.Point(20, 10);
+            this.mainContentLabel.Name = "mainContentLabel";
+            this.mainContentLabel.Size = new System.Drawing.Size(54, 30);
+            this.mainContentLabel.TabIndex = 0;
+            this.mainContentLabel.Text = "Loja";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblBalance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblBalance.Location = new System.Drawing.Point(900, 14);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(100, 22);
-            this.lblBalance.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            this.lblBalance.TabIndex = 2;
+            this.lblBalance.Text = "€0,00";
+            this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form3
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(28, 28, 28);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.panelSidebar);
             this.Controls.Add(this.mainContentPanel);
@@ -406,6 +400,7 @@ namespace Unreal_Store
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "Form3";
             this.Text = "Loja";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelNavStore.ResumeLayout(false);
             this.panelNavStore.PerformLayout();

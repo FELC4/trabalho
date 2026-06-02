@@ -110,7 +110,7 @@ namespace Unreal_Store
             mainContentLabel.Text = "Atualizar - Adicionar Fundos";
 
             var lblInfo = new Label() { Text = "Valor a adicionar (€):", ForeColor = Color.LightGray, Location = new Point(20, 60), AutoSize = true };
-            var tbAmount = new TextBox() { Location = new Point(20, 88), Size = new Size(120, 24), Text = "10,00" };
+            var tbAmount = new TextBox() { Location = new Point(20, 88), Size = new Size(120, 24), Text = "0,00" };
             var btnAdd = new Button() { Text = "Adicionar", Location = new Point(150, 86), Size = new Size(100, 26), BackColor = Color.FromArgb(70, 130, 180), FlatStyle = FlatStyle.Flat, ForeColor = Color.White };
 
             btnAdd.Click += (s, e) =>
@@ -228,6 +228,16 @@ namespace Unreal_Store
             {
                 g.FillEllipse(brush, cx - r, cy - r, r * 2, r * 2);
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelNavLibrary_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }      
