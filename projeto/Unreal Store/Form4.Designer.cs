@@ -2,16 +2,10 @@
 {
     partial class Form4
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
 
-        private System.Windows.Forms.Button button1; // Sair
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -59,11 +53,8 @@
             this.Name = "Form4";
             this.Text = "Definições";
             this.ResumeLayout(false);
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
     }
 }

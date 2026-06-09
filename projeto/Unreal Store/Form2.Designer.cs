@@ -112,7 +112,6 @@
             this.Text = "Criar conta";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

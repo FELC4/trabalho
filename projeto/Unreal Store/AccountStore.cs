@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using Unreal_Store;
 using System.Linq;
 
 namespace Unreal_Store
@@ -13,6 +12,37 @@ namespace Unreal_Store
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Unreal_Store");
 
         private static string FilePath => Path.Combine(FolderPath, "accounts.txt");
+
+        // IDs dos jogos
+        public const string GAME_ACAO = "ACAO";
+        public const string GAME_EXPLORACAO = "EXPLORACAO";
+        public const string GAME_POINTCLICK = "POINTCLICK";
+        public const string GAME_MULTI = "MULTI";
+
+        // Preços dos jogos para reembolso
+        public static decimal GetGamePrice(string gameId)
+        {
+            switch (gameId)
+            {
+                case GAME_ACAO: return 19.99m;
+                case GAME_EXPLORACAO: return 9.99m;
+                case GAME_POINTCLICK: return 3.99m;
+                case GAME_MULTI: return 0m;
+                default: return 0m;
+            }
+        }
+
+        public static string GetGameTitle(string gameId)
+        {
+            switch (gameId)
+            {
+                case GAME_ACAO: return "Jogo de Ação";
+                case GAME_EXPLORACAO: return "Jogo de Exploração";
+                case GAME_POINTCLICK: return "Point-and-Click 2D";
+                case GAME_MULTI: return "Multi-jogador";
+                default: return "Jogo Desconhecido";
+            }
+        }
 
         public static void EnsureStore()
         {
@@ -30,11 +60,10 @@ namespace Unreal_Store
             });
         }
 
-        // format: username|password|balance|game1,game2,...
         public static void AddAccount(string username, string password)
         {
             EnsureStore();
-            File.AppendAllText(FilePath, $"{username}|{password}|0|{Environment.NewLine}");
+            File.AppendAllText(FilePath, $"{username}|{password}|0||{Environment.NewLine}");
         }
 
         public static bool CheckCredentials(string username, string password)
@@ -84,8 +113,7 @@ namespace Unreal_Store
                     return;
                 }
             }
-            // not found -> add
-            File.AppendAllText(FilePath, $"{username}|{string.Empty}|{newBalance.ToString(CultureInfo.InvariantCulture)}|{Environment.NewLine}");
+            File.AppendAllText(FilePath, $"{username}|{string.Empty}|{newBalance.ToString(CultureInfo.InvariantCulture)}||{Environment.NewLine}");
         }
 
         public static void AddFunds(string username, decimal amount)
@@ -108,6 +136,57 @@ namespace Unreal_Store
             return false;
         }
 
+        public static bool TryRefund(string username, string gameId)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(gameId)) return false;
+
+            // Verificar se o jogo existe na biblioteca
+            if (!HasGame(username, gameId)) return false;
+
+            // Jogos gratuitos não podem ser reembolsados
+            decimal gamePrice = GetGamePrice(gameId);
+            if (gamePrice <= 0) return false;
+
+            // Remover o jogo da biblioteca
+            RemoveOwnedGame(username, gameId);
+
+            // Devolver o dinheiro
+            AddFunds(username, gamePrice);
+
+            return true;
+        }
+
+        public static void RemoveOwnedGame(string username, string gameId)
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(gameId)) return;
+            EnsureStore();
+
+            var lines = File.ReadAllLines(FilePath).ToList();
+            for (int i = 0; i < lines.Count; i++)
+            {
+                var parts = lines[i].Split('|').ToList();
+                if (parts.Count == 0) continue;
+                if (string.Equals(parts[0], username, StringComparison.OrdinalIgnoreCase))
+                {
+                    var pwd = parts.Count >= 2 ? parts[1] : string.Empty;
+                    var balance = parts.Count >= 3 ? parts[2] : "0";
+                    var games = parts.Count >= 4 ? parts[3] : string.Empty;
+
+                    var list = new List<string>();
+                    if (!string.IsNullOrWhiteSpace(games))
+                        list.AddRange(games.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => s.Trim()));
+
+                    if (list.Contains(gameId, StringComparer.OrdinalIgnoreCase))
+                        list.RemoveAll(g => string.Equals(g, gameId, StringComparison.OrdinalIgnoreCase));
+
+                    var newGames = string.Join(",", list);
+                    lines[i] = $"{username}|{pwd}|{balance}|{newGames}";
+                    File.WriteAllLines(FilePath, lines);
+                    return;
+                }
+            }
+        }
+
         public static IReadOnlyList<string> GetOwnedGames(string username)
         {
             EnsureStore();
@@ -125,6 +204,12 @@ namespace Unreal_Store
                 }
             }
             return new List<string>();
+        }
+
+        public static bool HasGame(string username, string gameId)
+        {
+            var games = GetOwnedGames(username);
+            return games.Contains(gameId, StringComparer.OrdinalIgnoreCase);
         }
 
         public static void AddOwnedGame(string username, string gameId)
@@ -152,7 +237,6 @@ namespace Unreal_Store
                     return;
                 }
             }
-            // not found -> create with game
             File.AppendAllText(FilePath, $"{username}|{string.Empty}|0|{gameId}{Environment.NewLine}");
         }
     }

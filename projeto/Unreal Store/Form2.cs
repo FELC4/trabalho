@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Unreal_Store
@@ -13,11 +6,11 @@ namespace Unreal_Store
     public partial class Form2 : Form
     {
         public string CreatedUsername { get; private set; }
+        public string CreatedPassword { get; private set; }
 
         public Form2()
         {
             InitializeComponent();
-
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -45,6 +38,7 @@ namespace Unreal_Store
 
             AccountStore.AddAccount(username, pass);
             CreatedUsername = username;
+            CreatedPassword = pass;
             MessageBox.Show("Conta criada com sucesso.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();

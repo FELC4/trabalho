@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Unreal_Store
@@ -74,6 +68,7 @@ namespace Unreal_Store
             }
 
             var form3 = new Form3();
+            form3.Username = username;
             form3.FormClosed += (s, ea) => this.Close();
             form3.Show();
             this.Hide();
@@ -89,9 +84,9 @@ namespace Unreal_Store
                     {
                         txtUsername.Text = createForm.CreatedUsername;
                         txtUsername.ForeColor = Color.White;
-                        txtPassword.Text = "PALAVRA-PASSE";
-                        txtPassword.ForeColor = Color.Gray;
-                        txtPassword.UseSystemPasswordChar = false;
+                        txtPassword.Text = createForm.CreatedPassword;
+                        txtPassword.ForeColor = Color.White;
+                        txtPassword.UseSystemPasswordChar = true;
                     }
                 }
             }
