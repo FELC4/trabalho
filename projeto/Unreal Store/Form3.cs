@@ -11,14 +11,10 @@ namespace Unreal_Store
         private string currentUsername;
         private decimal sessionBalance = 0m;
         private Control[] storeControls;
-        private Control[] updateControls = Array.Empty<Control>();
-        private Control[] libraryControls = Array.Empty<Control>();
-        private Panel currentDynamicPanel = null; // Para manter referência ao painel dinâmico atual
+        private Panel currentDynamicPanel = null;
 
-        // Lista de jogos comprados na sessão anónima
         private System.Collections.Generic.List<string> sessionOwnedGames = new System.Collections.Generic.List<string>();
 
-        // Dados dos jogos
         private readonly string[] gameIds = new string[]
             { AccountStore.GAME_ACAO, AccountStore.GAME_EXPLORACAO, AccountStore.GAME_POINTCLICK, AccountStore.GAME_MULTI };
         private readonly string[] gameTitles = new string[]
@@ -32,6 +28,9 @@ namespace Unreal_Store
         public Form3()
         {
             InitializeComponent();
+
+            // Configurar form para redimensionamento
+            this.Resize += Form3_Resize;
 
             // Associar botões
             gameButtons[0] = button1;
@@ -64,7 +63,11 @@ namespace Unreal_Store
             lblEngineIcon.Click += (s, e) => ShowUpdate();
             lblEngineText.Click += (s, e) => ShowUpdate();
 
-            // Capturar controles da loja (os que estão no designer)
+            panelNavSettings.Click += (s, e) => ShowSettings();
+            lblSettingsIcon.Click += (s, e) => ShowSettings();
+            lblSettingsText.Click += (s, e) => ShowSettings();
+
+            // Capturar controles da loja
             storeControls = new Control[]
             {
                 button1, button2, button3, button4,
@@ -83,6 +86,45 @@ namespace Unreal_Store
             UpdateBalanceDisplay();
         }
 
+        private void Form3_Resize(object sender, EventArgs e)
+        {
+            // Reajustar painéis dinâmicos se existirem
+            if (currentDynamicPanel != null && mainContentPanel.Controls.Contains(currentDynamicPanel))
+            {
+                currentDynamicPanel.Size = new Size(mainContentPanel.Width - 40, mainContentPanel.Height - 80);
+            }
+
+            // Reajustar botões da loja para serem responsivos
+            if (mainContentLabel.Text == "Loja")
+            {
+                AdjustStoreButtons();
+            }
+        }
+
+        private void AdjustStoreButtons()
+        {
+            int panelWidth = mainContentPanel.Width - 40;
+            int buttonWidth = Math.Max(120, (panelWidth - 60) / 4);
+            int spacing = (panelWidth - (buttonWidth * 4)) / 5;
+
+            for (int i = 0; i < gameButtons.Length; i++)
+            {
+                int x = spacing + (i * (buttonWidth + spacing));
+                gameButtons[i].Width = buttonWidth;
+                gameButtons[i].Location = new Point(x, gameButtons[i].Location.Y);
+
+                // Ajustar labels de título
+                gameTitleLabels[i].Location = new Point(x, gameTitleLabels[i].Location.Y);
+                gameTitleLabels[i].Width = buttonWidth;
+                gameTitleLabels[i].TextAlign = ContentAlignment.MiddleCenter;
+
+                // Ajustar labels de preço
+                gamePriceLabels[i].Location = new Point(x, gamePriceLabels[i].Location.Y);
+                gamePriceLabels[i].Width = buttonWidth;
+                gamePriceLabels[i].TextAlign = ContentAlignment.MiddleCenter;
+            }
+        }
+
         public string Username
         {
             set
@@ -94,7 +136,6 @@ namespace Unreal_Store
 
                 currentUsername = value;
 
-                // Transferir jogos da sessão para a conta
                 if (hadSessionGames)
                 {
                     foreach (string gameId in sessionOwnedGames)
@@ -109,7 +150,6 @@ namespace Unreal_Store
                     sessionOwnedGames.Clear();
                 }
 
-                // Transferir saldo da sessão para a conta
                 if (hadSessionBalance)
                 {
                     AccountStore.AddFunds(currentUsername, sessionBalanceAmount);
@@ -120,7 +160,6 @@ namespace Unreal_Store
                 UpdateBalanceDisplay();
                 UpdateStoreButtonsState();
 
-                // Se a biblioteca estiver visível, atualizar
                 if (mainContentLabel.Text == "Biblioteca")
                 {
                     ShowLibrary();
@@ -179,7 +218,6 @@ namespace Unreal_Store
 
         private void ClearDynamicPanels()
         {
-            // Remover painel dinâmico atual se existir
             if (currentDynamicPanel != null && mainContentPanel.Controls.Contains(currentDynamicPanel))
             {
                 mainContentPanel.Controls.Remove(currentDynamicPanel);
@@ -187,9 +225,8 @@ namespace Unreal_Store
                 currentDynamicPanel = null;
             }
 
-            // Remover quaisquer outros controles dinâmicos que possam ter ficado
             var toRemove = mainContentPanel.Controls.Cast<Control>()
-                .Where(c => c != mainContentLabel && !storeControls.Contains(c) && c != lblBalance && c.Parent == mainContentPanel)
+                .Where(c => c != mainContentLabel && !storeControls.Contains(c) && c.Parent == mainContentPanel)
                 .ToList();
 
             foreach (var c in toRemove)
@@ -206,55 +243,55 @@ namespace Unreal_Store
         {
             ClearDynamicPanels();
 
-            // Mostrar controles da loja
             foreach (var c in storeControls)
             {
                 c.Visible = true;
             }
 
-            // Atualizar cores da sidebar
             panelNavStore.BackColor = Color.FromArgb(48, 48, 48);
             panelNavLibrary.BackColor = Color.FromArgb(22, 22, 22);
             panelNavEngine.BackColor = Color.FromArgb(22, 22, 22);
+            panelNavSettings.BackColor = Color.FromArgb(22, 22, 22);
 
-            // Atualizar cores dos textos
             lblStoreText.ForeColor = Color.White;
             lblStoreIcon.ForeColor = Color.White;
             lblLibraryText.ForeColor = Color.LightGray;
             lblLibraryIcon.ForeColor = Color.LightGray;
             lblEngineText.ForeColor = Color.LightGray;
             lblEngineIcon.ForeColor = Color.LightGray;
+            lblSettingsText.ForeColor = Color.LightGray;
+            lblSettingsIcon.ForeColor = Color.LightGray;
 
             mainContentLabel.Text = "Loja";
             UpdateStoreButtonsState();
+            AdjustStoreButtons();
         }
 
         private void ShowLibrary()
         {
             ClearDynamicPanels();
 
-            // Esconder controles da loja
             foreach (var c in storeControls)
             {
                 c.Visible = false;
             }
 
-            // Atualizar cores da sidebar
             panelNavStore.BackColor = Color.FromArgb(22, 22, 22);
             panelNavLibrary.BackColor = Color.FromArgb(48, 48, 48);
             panelNavEngine.BackColor = Color.FromArgb(22, 22, 22);
+            panelNavSettings.BackColor = Color.FromArgb(22, 22, 22);
 
-            // Atualizar cores dos textos
             lblStoreText.ForeColor = Color.LightGray;
             lblStoreIcon.ForeColor = Color.LightGray;
             lblLibraryText.ForeColor = Color.White;
             lblLibraryIcon.ForeColor = Color.White;
             lblEngineText.ForeColor = Color.LightGray;
             lblEngineIcon.ForeColor = Color.LightGray;
+            lblSettingsText.ForeColor = Color.LightGray;
+            lblSettingsIcon.ForeColor = Color.LightGray;
 
             mainContentLabel.Text = "Biblioteca";
 
-            // Criar painel da biblioteca
             Panel libraryPanel = new Panel()
             {
                 Location = new Point(20, 60),
@@ -309,7 +346,8 @@ namespace Unreal_Store
                         Size = new Size(libraryPanel.Width - 20, 80),
                         Location = new Point(0, yOffset),
                         BackColor = Color.FromArgb(45, 45, 45),
-                        Margin = new Padding(0, 0, 0, 10)
+                        Margin = new Padding(0, 0, 0, 10),
+                        Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
                     };
 
                     string iconText = "🎮";
@@ -356,7 +394,8 @@ namespace Unreal_Store
                         BackColor = Color.FromArgb(70, 130, 180),
                         FlatStyle = FlatStyle.Flat,
                         ForeColor = Color.White,
-                        Tag = gameTitles[gameIndex]
+                        Tag = gameTitles[gameIndex],
+                        Anchor = AnchorStyles.Top | AnchorStyles.Right
                     };
                     playButton.Click += PlayButton_Click;
 
@@ -385,28 +424,27 @@ namespace Unreal_Store
         {
             ClearDynamicPanels();
 
-            // Esconder controles da loja
             foreach (var c in storeControls)
             {
                 c.Visible = false;
             }
 
-            // Atualizar cores da sidebar
             panelNavStore.BackColor = Color.FromArgb(22, 22, 22);
             panelNavLibrary.BackColor = Color.FromArgb(22, 22, 22);
             panelNavEngine.BackColor = Color.FromArgb(48, 48, 48);
+            panelNavSettings.BackColor = Color.FromArgb(22, 22, 22);
 
-            // Atualizar cores dos textos
             lblStoreText.ForeColor = Color.LightGray;
             lblStoreIcon.ForeColor = Color.LightGray;
             lblLibraryText.ForeColor = Color.LightGray;
             lblLibraryIcon.ForeColor = Color.LightGray;
             lblEngineText.ForeColor = Color.White;
             lblEngineIcon.ForeColor = Color.White;
+            lblSettingsText.ForeColor = Color.LightGray;
+            lblSettingsIcon.ForeColor = Color.LightGray;
 
             mainContentLabel.Text = "Atualizar - Adicionar Fundos / Reembolsos";
 
-            // Criar painel principal de atualização
             Panel updatePanel = new Panel()
             {
                 Location = new Point(20, 60),
@@ -516,7 +554,6 @@ namespace Unreal_Store
             updatePanel.Controls.Add(lblRefundTitle);
             updatePanel.Controls.Add(lblRefundInfo);
 
-            // Obter lista de jogos que podem ser reembolsados
             System.Collections.Generic.List<string> ownedGames;
             if (!string.IsNullOrWhiteSpace(currentUsername))
             {
@@ -527,7 +564,6 @@ namespace Unreal_Store
                 ownedGames = sessionOwnedGames;
             }
 
-            // Filtrar apenas jogos pagos
             var refundableGames = new System.Collections.Generic.List<(string id, string title, decimal price)>();
             foreach (string gameId in ownedGames)
             {
@@ -558,7 +594,8 @@ namespace Unreal_Store
                     {
                         Size = new Size(updatePanel.Width - 40, 50),
                         Location = new Point(0, yOffset),
-                        BackColor = Color.FromArgb(45, 45, 45)
+                        BackColor = Color.FromArgb(45, 45, 45),
+                        Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
                     };
 
                     Label gameNameLabel = new Label()
@@ -578,7 +615,8 @@ namespace Unreal_Store
                         BackColor = Color.FromArgb(220, 80, 80),
                         FlatStyle = FlatStyle.Flat,
                         ForeColor = Color.White,
-                        Tag = game.id
+                        Tag = game.id,
+                        Anchor = AnchorStyles.Top | AnchorStyles.Right
                     };
                     refundButton.Click += RefundButton_Click;
 
@@ -637,17 +675,14 @@ namespace Unreal_Store
                 UpdateBalanceDisplay();
                 UpdateStoreButtonsState();
 
-                // Se a loja estiver visível, atualizar botões
                 if (mainContentLabel.Text == "Loja")
                 {
                     UpdateStoreButtonsState();
                 }
-                // Se a biblioteca estiver visível, recarregar
                 else if (mainContentLabel.Text == "Biblioteca")
                 {
                     ShowLibrary();
                 }
-                // Se estiver na página de atualização, recarregar
                 else if (mainContentLabel.Text == "Atualizar - Adicionar Fundos / Reembolsos")
                 {
                     ShowUpdate();
@@ -781,7 +816,6 @@ namespace Unreal_Store
                     if (!string.IsNullOrWhiteSpace(createForm.CreatedUsername))
                     {
                         string newUsername = createForm.CreatedUsername;
-                        string newPassword = createForm.CreatedPassword;
 
                         foreach (string gameId in sessionOwnedGames)
                         {
@@ -822,8 +856,31 @@ namespace Unreal_Store
             }
         }
 
-        private void bottomDot_Click(object sender, EventArgs e)
+        private void ShowSettings()
         {
+            ClearDynamicPanels();
+
+            foreach (var c in storeControls)
+            {
+                c.Visible = false;
+            }
+
+            panelNavStore.BackColor = Color.FromArgb(22, 22, 22);
+            panelNavLibrary.BackColor = Color.FromArgb(22, 22, 22);
+            panelNavEngine.BackColor = Color.FromArgb(22, 22, 22);
+            panelNavSettings.BackColor = Color.FromArgb(48, 48, 48);
+
+            lblStoreText.ForeColor = Color.LightGray;
+            lblStoreIcon.ForeColor = Color.LightGray;
+            lblLibraryText.ForeColor = Color.LightGray;
+            lblLibraryIcon.ForeColor = Color.LightGray;
+            lblEngineText.ForeColor = Color.LightGray;
+            lblEngineIcon.ForeColor = Color.LightGray;
+            lblSettingsText.ForeColor = Color.White;
+            lblSettingsIcon.ForeColor = Color.White;
+
+            mainContentLabel.Text = "Definições";
+
             using (Form4 f4 = new Form4())
             {
                 this.Hide();
@@ -832,20 +889,8 @@ namespace Unreal_Store
             }
             UpdateBalanceDisplay();
             UpdateStoreButtonsState();
-        }
 
-        private void bottomDot_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            Rectangle rc = (sender as Control)?.ClientRectangle ?? new Rectangle(0, 0, 16, 16);
-            int cx = rc.Width / 2;
-            int cy = rc.Height / 2;
-            int r = Math.Min(rc.Width, rc.Height) / 4;
-            using (SolidBrush brush = new SolidBrush(Color.FromArgb(64, 184, 255)))
-            {
-                g.FillEllipse(brush, cx - r, cy - r, r * 2, r * 2);
-            }
+            ShowStore();
         }
 
         private void Form3_Load(object sender, EventArgs e)
