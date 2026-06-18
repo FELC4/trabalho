@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\projeto\\unreal store\\accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -53,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -82,12 +82,11 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T08:04:29.324Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
@@ -95,12 +94,11 @@
               "RelativeToolTip": "Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T11:26:49.879Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -108,12 +106,11 @@
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T11:16:34.173Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
               "Title": "Form4.cs [Design]",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
@@ -134,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -142,12 +139,11 @@
               "RelativeToolTip": "Properties\\Resources.resx",
               "ViewState": "AgIAAJ8AAAAAAAAAAAAAALkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-05-21T07:57:46.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T07:57:46.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -155,12 +151,11 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAwwJYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T08:11:36.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T08:11:36.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Form3.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "Form3.Designer.cs",
@@ -168,25 +163,24 @@
               "RelativeToolTip": "Form3.Designer.cs",
               "ViewState": "AgIAAMcBAAAAAAAAAAAwwAkCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T08:17:11.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T08:17:11.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form4.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
               "ToolTip": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form4.cs",
               "RelativeToolTip": "Form4.cs",
-              "ViewState": "AgIAAMsBAAAAAAAAAAAwwA0CAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAMIBAAAAAAAAAAAwwOoBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:35:19.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
@@ -194,12 +188,11 @@
               "RelativeToolTip": "Form3.cs",
               "ViewState": "AgIAAEUDAAAAAAAAAAAwwIcDAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T10:29:03.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-30T10:29:03.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -207,12 +200,11 @@
               "RelativeToolTip": "Form2.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAowDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:20:05.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:20:05.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form4.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form4.Designer.cs",
               "RelativeDocumentMoniker": "Form4.Designer.cs",
@@ -220,12 +212,11 @@
               "RelativeToolTip": "Form4.Designer.cs",
               "ViewState": "AgIAAOIBAAAAAAAAAAAkwBUCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T08:17:22.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T08:17:22.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "Form2.Designer.cs",
@@ -233,12 +224,11 @@
               "RelativeToolTip": "Form2.Designer.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAwwJ4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:19:52.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:19:52.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AccountStore.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\AccountStore.cs",
               "RelativeDocumentMoniker": "AccountStore.cs",
@@ -246,12 +236,11 @@
               "RelativeToolTip": "AccountStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:19:31.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:19:31.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -259,11 +248,12 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T09:11:50.353Z"
+              "WhenOpened": "2026-04-28T09:11:50.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\projeto\\Unreal Store\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -271,8 +261,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAwwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T08:41:25.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T08:41:25.991Z"
             }
           ]
         }
