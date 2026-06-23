@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -17,7 +14,6 @@ namespace Unreal_Store
         {
             InitializeComponent();
 
-            // Remover eventos antigos e adicionar os novos
             this.btnLogout.Click -= btnLogout_Click;
             this.btnLogout.Click += btnLogout_Click;
 
@@ -49,16 +45,16 @@ namespace Unreal_Store
             if (form3 != null && !string.IsNullOrWhiteSpace(form3.Username))
             {
                 currentUsername = form3.Username;
-                decimal balance = AccountStore.GetBalance(currentUsername);
-
-                lblUsernameValue.Text = currentUsername;
-                lblBalanceValue.Text = balance.ToString("C2", CultureInfo.GetCultureInfo("pt-PT"));
-
-                txtNewUsername.Text = currentUsername;
-                currentPassword = GetUserPassword(currentUsername);
-
-                btnDeleteAccount.Enabled = true;
-                btnDeleteAccount.BackColor = System.Drawing.Color.FromArgb(180, 40, 40);
+                var userInfo = AccountStore.GetUserInfo(currentUsername);
+                if (userInfo != null)
+                {
+                    lblUsernameValue.Text = currentUsername;
+                    lblBalanceValue.Text = userInfo.Balance.ToString("C2", new System.Globalization.CultureInfo("pt-PT"));
+                    txtNewUsername.Text = currentUsername;
+                    currentPassword = userInfo.Password;
+                    btnDeleteAccount.Enabled = true;
+                    btnDeleteAccount.BackColor = System.Drawing.Color.FromArgb(180, 40, 40);
+                }
             }
             else
             {
@@ -71,93 +67,13 @@ namespace Unreal_Store
             }
         }
 
-        private string GetUserPassword(string username)
-        {
-            string filePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Unreal_Store", "accounts.txt");
-
-            if (!File.Exists(filePath)) return string.Empty;
-
-            foreach (var line in File.ReadAllLines(filePath))
-            {
-                var parts = line.Split('|');
-                if (parts.Length >= 2 && string.Equals(parts[0], username, StringComparison.OrdinalIgnoreCase))
-                {
-                    return parts[1];
-                }
-            }
-            return string.Empty;
-        }
-
-        private void UpdateUserInFile(string oldUsername, string newUsername, string newPassword)
-        {
-            string filePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Unreal_Store", "accounts.txt");
-
-            if (!File.Exists(filePath)) return;
-
-            var lines = File.ReadAllLines(filePath).ToList();
-            bool userFound = false;
-
-            for (int i = 0; i < lines.Count; i++)
-            {
-                var parts = lines[i].Split('|');
-                if (parts.Length >= 2 && string.Equals(parts[0], oldUsername, StringComparison.OrdinalIgnoreCase))
-                {
-                    string balance = parts.Length >= 3 ? parts[2] : "0";
-                    string games = parts.Length >= 4 ? parts[3] : string.Empty;
-
-                    lines[i] = $"{newUsername}|{newPassword}|{balance}|{games}";
-                    userFound = true;
-                    break;
-                }
-            }
-
-            if (userFound)
-            {
-                File.WriteAllLines(filePath, lines);
-            }
-        }
-
-        private void DeleteUserFromFile(string username)
-        {
-            string filePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Unreal_Store", "accounts.txt");
-
-            if (!File.Exists(filePath)) return;
-
-            var lines = File.ReadAllLines(filePath).ToList();
-            bool userFound = false;
-
-            for (int i = lines.Count - 1; i >= 0; i--)
-            {
-                var parts = lines[i].Split('|');
-                if (parts.Length >= 1 && string.Equals(parts[0], username, StringComparison.OrdinalIgnoreCase))
-                {
-                    lines.RemoveAt(i);
-                    userFound = true;
-                    break;
-                }
-            }
-
-            if (userFound)
-            {
-                File.WriteAllLines(filePath, lines);
-            }
-        }
-
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             panelAccountActions.Visible = false;
             panelEditProfile.Visible = true;
-
             txtNewUsername.Text = currentUsername;
             txtNewPassword.Text = "";
             txtConfirmPassword.Text = "";
-
             mainContentLabel.Text = "Definições - Editar Perfil";
         }
 
@@ -217,7 +133,7 @@ namespace Unreal_Store
 
             try
             {
-                UpdateUserInFile(currentUsername, newUsername, newPassword);
+                AccountStore.UpdateUser(currentUsername, newUsername, newPassword);
 
                 var form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault();
                 if (form3 != null)
@@ -231,19 +147,11 @@ namespace Unreal_Store
                 UpdateUserInfo();
                 btnCancelEdit_Click(sender, e);
 
-                MessageBox.Show(
-                    $"Perfil atualizado com sucesso!\n\nNovo Utilizador: {newUsername}",
-                    "Sucesso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                MessageBox.Show($"Perfil atualizado com sucesso!\n\nNovo Utilizador: {newUsername}", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    $"Erro ao atualizar o perfil: {ex.Message}",
-                    "Erro",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao atualizar o perfil: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -252,7 +160,6 @@ namespace Unreal_Store
             panelEditProfile.Visible = false;
             panelAccountActions.Visible = true;
             mainContentLabel.Text = "Definições";
-
             txtNewUsername.Text = "";
             txtNewPassword.Text = "";
             txtConfirmPassword.Text = "";
@@ -260,7 +167,6 @@ namespace Unreal_Store
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            // Confirmar eliminação da conta
             DialogResult confirm = MessageBox.Show(
                 $"⚠️ TEM A CERTEZA QUE DESEJA EXCLUIR A CONTA? ⚠️\n\n" +
                 $"Conta: {currentUsername}\n\n" +
@@ -275,7 +181,6 @@ namespace Unreal_Store
 
             if (confirm != DialogResult.Yes) return;
 
-            // Segunda confirmação com password - Formulário melhorado
             using (Form passwordForm = new Form())
             {
                 passwordForm.Text = "Confirmar Exclusão";
@@ -288,7 +193,6 @@ namespace Unreal_Store
                 passwordForm.ForeColor = System.Drawing.Color.White;
                 passwordForm.Font = new System.Drawing.Font("Segoe UI", 9F);
 
-                // Painel principal com padding
                 Panel mainPanel = new Panel()
                 {
                     Dock = DockStyle.Fill,
@@ -296,7 +200,6 @@ namespace Unreal_Store
                     BackColor = System.Drawing.Color.FromArgb(48, 48, 48)
                 };
 
-                // Label de título
                 Label lblTitle = new Label()
                 {
                     Text = $"🔒 Verificação de Segurança",
@@ -307,7 +210,6 @@ namespace Unreal_Store
                     TextAlign = System.Drawing.ContentAlignment.MiddleLeft
                 };
 
-                // Label de mensagem
                 Label lblMessage = new Label()
                 {
                     Text = $"Para confirmar a exclusão da conta '{currentUsername}',\ninsira a sua palavra-passe:",
@@ -317,7 +219,6 @@ namespace Unreal_Store
                     Font = new System.Drawing.Font("Segoe UI", 9.5F)
                 };
 
-                // Panel para a password
                 Panel passwordPanel = new Panel()
                 {
                     Location = new System.Drawing.Point(0, 85),
@@ -347,7 +248,6 @@ namespace Unreal_Store
                 passwordPanel.Controls.Add(lblPassword);
                 passwordPanel.Controls.Add(txtPassword);
 
-                // Panel para os botões
                 Panel buttonPanel = new Panel()
                 {
                     Location = new System.Drawing.Point(0, 125),
@@ -383,7 +283,6 @@ namespace Unreal_Store
                 buttonPanel.Controls.Add(btnCancel);
                 buttonPanel.Controls.Add(btnConfirm);
 
-                // Adicionar controles ao painel principal
                 mainPanel.Controls.Add(lblTitle);
                 mainPanel.Controls.Add(lblMessage);
                 mainPanel.Controls.Add(passwordPanel);
@@ -393,7 +292,6 @@ namespace Unreal_Store
                 passwordForm.AcceptButton = btnConfirm;
                 passwordForm.CancelButton = btnCancel;
 
-                // Focar automaticamente no campo de password
                 passwordForm.Shown += (s, ev) => txtPassword.Focus();
 
                 DialogResult result = passwordForm.ShowDialog(this);
@@ -402,18 +300,12 @@ namespace Unreal_Store
                 {
                     string enteredPassword = txtPassword.Text;
 
-                    // Verificar password
                     if (enteredPassword != currentPassword)
                     {
-                        MessageBox.Show(
-                            "Palavra-passe incorreta.\nA exclusão da conta foi cancelada.",
-                            "Erro de Autenticação",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                        MessageBox.Show("Palavra-passe incorreta.\nA exclusão da conta foi cancelada.", "Erro de Autenticação", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
-                    // Terceira confirmação final
                     DialogResult finalConfirm = MessageBox.Show(
                         $"⚠️ EXCLUSÃO PERMANENTE ⚠️\n\n" +
                         $"A conta '{currentUsername}' será excluída permanentemente.\n\n" +
@@ -426,36 +318,23 @@ namespace Unreal_Store
 
                     try
                     {
-                        // Remover a conta do ficheiro
-                        DeleteUserFromFile(currentUsername);
+                        AccountStore.DeleteUser(currentUsername);
 
-                        // Fechar o Form3
                         var form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault();
                         if (form3 != null)
                         {
                             form3.Close();
                         }
 
-                        // Fechar este formulário
                         this.Close();
 
-                        MessageBox.Show(
-                            $"A conta '{currentUsername}' foi excluída com sucesso.\n\n" +
-                            "Todos os dados foram removidos permanentemente.",
-                            "Conta Excluída",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
+                        MessageBox.Show($"A conta '{currentUsername}' foi excluída com sucesso.\n\nTodos os dados foram removidos permanentemente.", "Conta Excluída", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Voltar ao login
                         Application.Restart();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(
-                            $"Erro ao excluir a conta: {ex.Message}",
-                            "Erro",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                        MessageBox.Show($"Erro ao excluir a conta: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -463,22 +342,13 @@ namespace Unreal_Store
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult confirm = MessageBox.Show(
-                "Tem a certeza que deseja terminar a sessão?\n\nOs jogos e saldo da sessão atual serão perdidos se não tiver conta.",
-                "Confirmar Saída",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
+            DialogResult confirm = MessageBox.Show("Tem a certeza que deseja terminar a sessão?", "Confirmar Saída", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (confirm == DialogResult.Yes)
             {
                 IsLogout = true;
-
                 var form3 = Application.OpenForms.OfType<Form3>().FirstOrDefault();
-                if (form3 != null)
-                {
-                    form3.Close();
-                }
-
+                if (form3 != null) form3.Close();
                 this.Close();
             }
         }
@@ -516,11 +386,7 @@ namespace Unreal_Store
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);
-
-            if (IsLogout)
-            {
-                Application.Exit();
-            }
+            if (IsLogout) Application.Exit();
         }
     }
 }
