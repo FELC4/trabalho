@@ -14,3 +14,4 @@ C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal S.BC064601.Up2Date
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.exe
 C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.pdb
+C:\Users\2224102\Documents\GitHub\trabalho\projeto\Unreal Store\obj\Debug\Unreal Store.exe.config
