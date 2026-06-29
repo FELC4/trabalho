@@ -7,21 +7,21 @@ A ideia era criar uma aplicação funcional que permitisse aos utilizadores cria
 Funcionalidades Principais
 Quando comecei a planear este projeto, pensei nas funcionalidades que considerava essenciais para uma loja de jogos:
 
-👤 Gestão de Utilizadores
+- Gestão de Utilizadores
 A aplicação permite criar contas com nome de utilizador e palavra-passe. Fiz questão de incluir validações básicas, como verificar se o nome já existe ou se tem pelo menos 3 caracteres. O login é simples e direto, com feedback claro em caso de erro. Também implementei um modo convidado, onde as pessoas podem explorar a loja sem criar conta - e se decidirem criar uma conta depois, todos os jogos que compraram e o saldo que adicionaram são transferidos automaticamente.
 
-🛍️ Loja
+- Loja
 A loja apresenta quatro jogos diferentes, cada um com a sua imagem, título e preço. Implementei a lógica de compra que verifica se o utilizador já tem o jogo, se tem saldo suficiente e processa a transação. Para os jogos gratuitos, a compra é instantânea e sem custos. A interface tenta ser visualmente apelativa, com botões grandes e cores que contrastam bem.
 
-📚 Biblioteca
+- Biblioteca
 Quando um utilizador compra um jogo, ele aparece na sua biblioteca pessoal. Criei uma lista visual onde cada jogo é apresentado num painel com ícone, título, estado e um botão "JOGAR" (que por enquanto só mostra uma mensagem, mas já dá para ter uma ideia do fluxo). A biblioteca fica vazia quando o utilizador não tem jogos, com uma mensagem amigável a sugerir que visite a loja.
 
-💰 Gestão Financeira
+- Gestão Financeira
 Uma das partes mais interessantes foi implementar o sistema de carteira digital. Os utilizadores podem adicionar fundos à sua conta e usar esse saldo para comprar jogos. Preocupei-me em garantir a consistência dos dados, usando transações SQL para operações como compras e reembolsos - assim, se algo correr mal, as alterações são revertidas e o saldo não fica inconsistente.
 
 Os reembolsos foram outro desafio. Permiti que os utilizadores peçam reembolso de jogos pagos, com a garantia que o jogo é removido da biblioteca e o dinheiro devolvido à carteira. É um processo que exige confirmação do utilizador para evitar acidentes.
 
-⚙️ Definições
+- Definições
 Na área de definições, os utilizadores podem editar o seu perfil (mudar nome ou palavra-passe) ou eliminar completamente a conta. Para eliminar a conta, implementei um sistema de dupla confirmação: primeiro uma caixa de diálogo de aviso, depois uma janela onde o utilizador tem de inserir a palavra-passe para confirmar. Isto evita eliminações acidentais e dá mais segurança.
 
 Tecnologias que Usei
