@@ -87,9 +87,7 @@
             this.mainLayout.SuspendLayout();
             this.SuspendLayout();
 
-            // 
-            // mainLayout
-            // 
+            
             this.mainLayout.ColumnCount = 2;
             this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -105,9 +103,7 @@
             this.mainLayout.Size = new System.Drawing.Size(1000, 600);
             this.mainLayout.TabIndex = 0;
 
-            // 
-            // panelSidebar
-            // 
+            
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelSidebar.Controls.Add(this.panelNavSettings);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -118,9 +114,7 @@
             this.panelSidebar.Size = new System.Drawing.Size(200, 600);
             this.panelSidebar.TabIndex = 0;
 
-            // 
-            // panelNavSettings
-            // 
+            
             this.panelNavSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.panelNavSettings.Controls.Add(this.lblSettingsIcon);
             this.panelNavSettings.Controls.Add(this.lblSettingsText);
@@ -130,9 +124,7 @@
             this.panelNavSettings.Size = new System.Drawing.Size(184, 56);
             this.panelNavSettings.TabIndex = 0;
 
-            // 
-            // lblSettingsIcon
-            // 
+            
             this.lblSettingsIcon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
             this.lblSettingsIcon.ForeColor = System.Drawing.Color.White;
             this.lblSettingsIcon.Location = new System.Drawing.Point(12, 16);
@@ -142,9 +134,7 @@
             this.lblSettingsIcon.Text = "⚙️";
             this.lblSettingsIcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            // 
-            // lblSettingsText
-            // 
+           
             this.lblSettingsText.AutoSize = true;
             this.lblSettingsText.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblSettingsText.ForeColor = System.Drawing.Color.White;
@@ -154,9 +144,7 @@
             this.lblSettingsText.TabIndex = 1;
             this.lblSettingsText.Text = "Definições";
 
-            // 
-            // topBarPanel
-            // 
+           
             this.topBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.topBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topBarPanel.Location = new System.Drawing.Point(200, 0);
@@ -165,9 +153,7 @@
             this.topBarPanel.Size = new System.Drawing.Size(800, 48);
             this.topBarPanel.TabIndex = 1;
 
-            // 
-            // mainContentPanel
-            // 
+           
             this.mainContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.mainContentPanel.Controls.Add(this.mainContentLabel);
             this.mainContentPanel.Controls.Add(this.panelUserInfo);
@@ -180,9 +166,7 @@
             this.mainContentPanel.Size = new System.Drawing.Size(794, 546);
             this.mainContentPanel.TabIndex = 2;
 
-            // 
-            // mainContentLabel
-            // 
+           
             this.mainContentLabel.AutoSize = true;
             this.mainContentLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.mainContentLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -192,9 +176,7 @@
             this.mainContentLabel.TabIndex = 0;
             this.mainContentLabel.Text = "Definições";
 
-            // 
-            // panelUserInfo
-            // 
+          
             this.panelUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -208,9 +190,7 @@
             this.panelUserInfo.Size = new System.Drawing.Size(740, 120);
             this.panelUserInfo.TabIndex = 1;
 
-            // 
-            // lblUserInfoTitle
-            // 
+          
             this.lblUserInfoTitle.AutoSize = true;
             this.lblUserInfoTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.lblUserInfoTitle.ForeColor = System.Drawing.Color.LightGreen;
@@ -220,9 +200,7 @@
             this.lblUserInfoTitle.TabIndex = 0;
             this.lblUserInfoTitle.Text = "INFORMAÇÃO DA CONTA";
 
-            // 
-            // lblUsername
-            // 
+         
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblUsername.ForeColor = System.Drawing.Color.LightGray;
@@ -232,9 +210,7 @@
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Utilizador:";
 
-            // 
-            // lblUsernameValue
-            // 
+          
             this.lblUsernameValue.AutoSize = true;
             this.lblUsernameValue.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblUsernameValue.ForeColor = System.Drawing.Color.White;
@@ -244,9 +220,7 @@
             this.lblUsernameValue.TabIndex = 2;
             this.lblUsernameValue.Text = "Convidado";
 
-            // 
-            // lblBalance
-            // 
+           
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblBalance.ForeColor = System.Drawing.Color.LightGray;
@@ -256,9 +230,7 @@
             this.lblBalance.TabIndex = 3;
             this.lblBalance.Text = "Saldo:";
 
-            // 
-            // lblBalanceValue
-            // 
+            
             this.lblBalanceValue.AutoSize = true;
             this.lblBalanceValue.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblBalanceValue.ForeColor = System.Drawing.Color.Gold;
@@ -268,9 +240,7 @@
             this.lblBalanceValue.TabIndex = 4;
             this.lblBalanceValue.Text = "0,00€";
 
-            // 
-            // panelAccountActions
-            // 
+           
             this.panelAccountActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelAccountActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -283,9 +253,7 @@
             this.panelAccountActions.Size = new System.Drawing.Size(740, 150);
             this.panelAccountActions.TabIndex = 2;
 
-            // 
-            // lblAccountActionsTitle
-            // 
+           
             this.lblAccountActionsTitle.AutoSize = true;
             this.lblAccountActionsTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.lblAccountActionsTitle.ForeColor = System.Drawing.Color.LightCoral;
@@ -295,9 +263,7 @@
             this.lblAccountActionsTitle.TabIndex = 0;
             this.lblAccountActionsTitle.Text = "AÇÕES DA CONTA";
 
-            // 
-            // btnEditProfile
-            // 
+            
             this.btnEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(130)))), ((int)(((byte)(200)))));
             this.btnEditProfile.FlatAppearance.BorderSize = 0;
             this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -311,9 +277,7 @@
             this.btnEditProfile.UseVisualStyleBackColor = false;
             this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
 
-            // 
-            // btnLogout
-            // 
+            
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -327,9 +291,7 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
 
-            // 
-            // btnDeleteAccount
-            // 
+            
             this.btnDeleteAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.btnDeleteAccount.FlatAppearance.BorderSize = 0;
             this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -343,9 +305,7 @@
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
             this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
 
-            // 
-            // panelEditProfile
-            // 
+            
             this.panelEditProfile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -364,9 +324,7 @@
             this.panelEditProfile.TabIndex = 4;
             this.panelEditProfile.Visible = false;
 
-            // 
-            // lblEditProfileTitle
-            // 
+            
             this.lblEditProfileTitle.AutoSize = true;
             this.lblEditProfileTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.lblEditProfileTitle.ForeColor = System.Drawing.Color.LightBlue;
@@ -376,9 +334,7 @@
             this.lblEditProfileTitle.TabIndex = 0;
             this.lblEditProfileTitle.Text = "EDITAR PERFIL";
 
-            // 
-            // lblNewUsername
-            // 
+             
             this.lblNewUsername.AutoSize = true;
             this.lblNewUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblNewUsername.ForeColor = System.Drawing.Color.LightGray;
@@ -388,9 +344,7 @@
             this.lblNewUsername.TabIndex = 1;
             this.lblNewUsername.Text = "Novo Utilizador:";
 
-            // 
-            // txtNewUsername
-            // 
+             
             this.txtNewUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtNewUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -400,9 +354,7 @@
             this.txtNewUsername.Size = new System.Drawing.Size(250, 25);
             this.txtNewUsername.TabIndex = 2;
 
-            // 
-            // lblNewPassword
-            // 
+           
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblNewPassword.ForeColor = System.Drawing.Color.LightGray;
@@ -412,9 +364,7 @@
             this.lblNewPassword.TabIndex = 3;
             this.lblNewPassword.Text = "Nova Palavra-passe:";
 
-            // 
-            // txtNewPassword
-            // 
+            
             this.txtNewPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -425,9 +375,7 @@
             this.txtNewPassword.TabIndex = 4;
             this.txtNewPassword.UseSystemPasswordChar = true;
 
-            // 
-            // lblConfirmPassword
-            // 
+            
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblConfirmPassword.ForeColor = System.Drawing.Color.LightGray;
@@ -437,9 +385,7 @@
             this.lblConfirmPassword.TabIndex = 5;
             this.lblConfirmPassword.Text = "Confirmar Password:";
 
-            // 
-            // txtConfirmPassword
-            // 
+            
             this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -450,9 +396,7 @@
             this.txtConfirmPassword.TabIndex = 6;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
 
-            // 
-            // btnSaveChanges
-            // 
+           
             this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.btnSaveChanges.FlatAppearance.BorderSize = 0;
             this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -466,9 +410,7 @@
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
 
-            // 
-            // btnCancelEdit
-            // 
+            
             this.btnCancelEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnCancelEdit.FlatAppearance.BorderSize = 0;
             this.btnCancelEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -482,9 +424,7 @@
             this.btnCancelEdit.UseVisualStyleBackColor = false;
             this.btnCancelEdit.Click += new System.EventHandler(this.btnCancelEdit_Click);
 
-            // 
-            // btnBack
-            // 
+           
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
@@ -499,9 +439,7 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 
-            // 
-            // Form4
-            // 
+            
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);

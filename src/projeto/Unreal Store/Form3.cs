@@ -29,28 +29,28 @@ namespace Unreal_Store
         {
             InitializeComponent();
 
-            // Configurar form para redimensionamento
+           
             this.Resize += Form3_Resize;
 
-            // Associar botões
+          
             gameButtons[0] = button1;
             gameButtons[1] = button2;
             gameButtons[2] = button3;
             gameButtons[3] = button4;
 
-            // Associar labels de preço
+           
             gamePriceLabels[0] = label6;
             gamePriceLabels[1] = label7;
             gamePriceLabels[2] = label8;
             gamePriceLabels[3] = label9;
 
-            // Associar labels de título
+           
             gameTitleLabels[0] = label2;
             gameTitleLabels[1] = label3;
             gameTitleLabels[2] = label4;
             gameTitleLabels[3] = label5;
 
-            // Wire sidebar clicks
+           
             panelNavStore.Click += (s, e) => ShowStore();
             lblStoreIcon.Click += (s, e) => ShowStore();
             lblStoreText.Click += (s, e) => ShowStore();
@@ -67,7 +67,7 @@ namespace Unreal_Store
             lblSettingsIcon.Click += (s, e) => ShowSettings();
             lblSettingsText.Click += (s, e) => ShowSettings();
 
-            // Capturar controles da loja
+      
             storeControls = new Control[]
             {
                 button1, button2, button3, button4,
@@ -75,7 +75,7 @@ namespace Unreal_Store
                 label6, label7, label8, label9
             };
 
-            // Garantir que os botões têm o evento correto
+           
             for (int i = 0; i < gameButtons.Length; i++)
             {
                 gameButtons[i].Click -= GameButton_Click;
@@ -88,13 +88,13 @@ namespace Unreal_Store
 
         private void Form3_Resize(object sender, EventArgs e)
         {
-            // Reajustar painéis dinâmicos se existirem
+            
             if (currentDynamicPanel != null && mainContentPanel.Controls.Contains(currentDynamicPanel))
             {
                 currentDynamicPanel.Size = new Size(mainContentPanel.Width - 40, mainContentPanel.Height - 80);
             }
 
-            // Reajustar botões da loja para serem responsivos
+            
             if (mainContentLabel.Text == "Loja")
             {
                 AdjustStoreButtons();
@@ -113,12 +113,12 @@ namespace Unreal_Store
                 gameButtons[i].Width = buttonWidth;
                 gameButtons[i].Location = new Point(x, gameButtons[i].Location.Y);
 
-                // Ajustar labels de título
+               
                 gameTitleLabels[i].Location = new Point(x, gameTitleLabels[i].Location.Y);
                 gameTitleLabels[i].Width = buttonWidth;
                 gameTitleLabels[i].TextAlign = ContentAlignment.MiddleCenter;
 
-                // Ajustar labels de preço
+                
                 gamePriceLabels[i].Location = new Point(x, gamePriceLabels[i].Location.Y);
                 gamePriceLabels[i].Width = buttonWidth;
                 gamePriceLabels[i].TextAlign = ContentAlignment.MiddleCenter;
@@ -456,7 +456,7 @@ namespace Unreal_Store
 
             int yOffset = 0;
 
-            // Secção de Adicionar Fundos
+           
             Label lblAddFundsTitle = new Label()
             {
                 Text = "--- ADICIONAR FUNDOS ---",
@@ -531,7 +531,6 @@ namespace Unreal_Store
             updatePanel.Controls.Add(tbAmount);
             updatePanel.Controls.Add(btnAdd);
 
-            // Secção de Reembolsos
             Label lblRefundTitle = new Label()
             {
                 Text = "--- REEMBOLSOS ---",
@@ -718,7 +717,7 @@ namespace Unreal_Store
 
             if (gameIndex == -1) return;
 
-            // Verificar se já possui o jogo
+            
             if (!string.IsNullOrWhiteSpace(currentUsername))
             {
                 if (AccountStore.HasGame(currentUsername, gameIds[gameIndex]))
@@ -742,7 +741,7 @@ namespace Unreal_Store
 
             if (res != DialogResult.Yes) return;
 
-            // Jogo gratuito
+        
             if (gamePrices[gameIndex] <= 0m)
             {
                 if (!string.IsNullOrWhiteSpace(currentUsername))
@@ -760,7 +759,7 @@ namespace Unreal_Store
                 return;
             }
 
-            // Jogo pago
+        
             if (!string.IsNullOrWhiteSpace(currentUsername))
             {
                 bool success = AccountStore.TrySpend(currentUsername, gamePrices[gameIndex]);
@@ -780,7 +779,6 @@ namespace Unreal_Store
                 }
             }
 
-            // Sessão anónima
             if (sessionBalance >= gamePrices[gameIndex])
             {
                 sessionBalance -= gamePrices[gameIndex];

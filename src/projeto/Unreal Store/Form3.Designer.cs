@@ -92,9 +92,7 @@ namespace Unreal_Store
             this.mainLayout.SuspendLayout();
             this.SuspendLayout();
 
-            // 
-            // mainLayout
-            // 
+            
             this.mainLayout.ColumnCount = 2;
             this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.mainLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -110,9 +108,7 @@ namespace Unreal_Store
             this.mainLayout.Size = new System.Drawing.Size(1000, 600);
             this.mainLayout.TabIndex = 0;
 
-            // 
-            // panelSidebar
-            // 
+            
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelSidebar.Controls.Add(this.panelNavStore);
             this.panelSidebar.Controls.Add(this.panelNavLibrary);
@@ -126,9 +122,7 @@ namespace Unreal_Store
             this.panelSidebar.Size = new System.Drawing.Size(200, 600);
             this.panelSidebar.TabIndex = 0;
 
-            // 
-            // panelNavStore
-            // 
+            
             this.panelNavStore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.panelNavStore.Controls.Add(this.lblStoreIcon);
             this.panelNavStore.Controls.Add(this.lblStoreText);
@@ -139,9 +133,7 @@ namespace Unreal_Store
             this.panelNavStore.Size = new System.Drawing.Size(184, 56);
             this.panelNavStore.TabIndex = 0;
 
-            // 
-            // lblStoreIcon
-            // 
+            
             this.lblStoreIcon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
             this.lblStoreIcon.ForeColor = System.Drawing.Color.White;
             this.lblStoreIcon.Location = new System.Drawing.Point(12, 16);
@@ -151,9 +143,7 @@ namespace Unreal_Store
             this.lblStoreIcon.Text = "🛍";
             this.lblStoreIcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            // 
-            // lblStoreText
-            // 
+            
             this.lblStoreText.AutoSize = true;
             this.lblStoreText.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblStoreText.ForeColor = System.Drawing.Color.White;
@@ -163,9 +153,7 @@ namespace Unreal_Store
             this.lblStoreText.TabIndex = 1;
             this.lblStoreText.Text = "Loja";
 
-            // 
-            // panelNavLibrary
-            // 
+            
             this.panelNavLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelNavLibrary.Controls.Add(this.lblLibraryIcon);
             this.panelNavLibrary.Controls.Add(this.lblLibraryText);
@@ -176,9 +164,7 @@ namespace Unreal_Store
             this.panelNavLibrary.Size = new System.Drawing.Size(184, 56);
             this.panelNavLibrary.TabIndex = 1;
 
-            // 
-            // lblLibraryIcon
-            // 
+            
             this.lblLibraryIcon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
             this.lblLibraryIcon.ForeColor = System.Drawing.Color.LightGray;
             this.lblLibraryIcon.Location = new System.Drawing.Point(12, 16);
@@ -188,9 +174,7 @@ namespace Unreal_Store
             this.lblLibraryIcon.Text = "📚";
             this.lblLibraryIcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            // 
-            // lblLibraryText
-            // 
+             
             this.lblLibraryText.AutoSize = true;
             this.lblLibraryText.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblLibraryText.ForeColor = System.Drawing.Color.LightGray;
@@ -200,9 +184,7 @@ namespace Unreal_Store
             this.lblLibraryText.TabIndex = 1;
             this.lblLibraryText.Text = "Biblioteca";
 
-            // 
-            // panelNavEngine
-            // 
+            
             this.panelNavEngine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelNavEngine.Controls.Add(this.lblEngineIcon);
             this.panelNavEngine.Controls.Add(this.lblEngineText);
@@ -213,9 +195,7 @@ namespace Unreal_Store
             this.panelNavEngine.Size = new System.Drawing.Size(184, 56);
             this.panelNavEngine.TabIndex = 2;
 
-            // 
-            // lblEngineIcon
-            // 
+             
             this.lblEngineIcon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
             this.lblEngineIcon.ForeColor = System.Drawing.Color.LightGray;
             this.lblEngineIcon.Location = new System.Drawing.Point(12, 16);
@@ -225,9 +205,7 @@ namespace Unreal_Store
             this.lblEngineIcon.Text = "⚙️";
             this.lblEngineIcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            // 
-            // lblEngineText
-            // 
+            
             this.lblEngineText.AutoSize = true;
             this.lblEngineText.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblEngineText.ForeColor = System.Drawing.Color.LightGray;
@@ -237,9 +215,7 @@ namespace Unreal_Store
             this.lblEngineText.TabIndex = 1;
             this.lblEngineText.Text = "Atualizar";
 
-            // 
-            // panelNavSettings
-            // 
+            
             this.panelNavSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panelNavSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panelNavSettings.Controls.Add(this.lblSettingsIcon);
@@ -251,9 +227,7 @@ namespace Unreal_Store
             this.panelNavSettings.Size = new System.Drawing.Size(184, 56);
             this.panelNavSettings.TabIndex = 4;
 
-            // 
-            // lblSettingsIcon
-            // 
+             
             this.lblSettingsIcon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
             this.lblSettingsIcon.ForeColor = System.Drawing.Color.LightGray;
             this.lblSettingsIcon.Location = new System.Drawing.Point(12, 16);
@@ -263,9 +237,7 @@ namespace Unreal_Store
             this.lblSettingsIcon.Text = "⚙️";
             this.lblSettingsIcon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            // 
-            // lblSettingsText
-            // 
+            
             this.lblSettingsText.AutoSize = true;
             this.lblSettingsText.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblSettingsText.ForeColor = System.Drawing.Color.LightGray;
@@ -275,9 +247,7 @@ namespace Unreal_Store
             this.lblSettingsText.TabIndex = 1;
             this.lblSettingsText.Text = "Definições";
 
-            // 
-            // topBarPanel
-            // 
+             
             this.topBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.topBarPanel.Controls.Add(this.lblBalance);
             this.topBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -287,9 +257,7 @@ namespace Unreal_Store
             this.topBarPanel.Size = new System.Drawing.Size(800, 48);
             this.topBarPanel.TabIndex = 1;
 
-            // 
-            // lblBalance
-            // 
+            
             this.lblBalance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lblBalance.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -300,9 +268,7 @@ namespace Unreal_Store
             this.lblBalance.Text = "€0,00";
             this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 
-            // 
-            // mainContentPanel
-            // 
+            
             this.mainContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.mainContentPanel.Controls.Add(this.mainContentLabel);
             this.mainContentPanel.Controls.Add(this.label9);
@@ -323,9 +289,7 @@ namespace Unreal_Store
             this.mainContentPanel.Size = new System.Drawing.Size(794, 546);
             this.mainContentPanel.TabIndex = 2;
 
-            // 
-            // mainContentLabel
-            // 
+            
             this.mainContentLabel.AutoSize = true;
             this.mainContentLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.mainContentLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -335,9 +299,7 @@ namespace Unreal_Store
             this.mainContentLabel.TabIndex = 0;
             this.mainContentLabel.Text = "Loja";
 
-            // 
-            // label9
-            // 
+           
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -348,9 +310,7 @@ namespace Unreal_Store
             this.label9.TabIndex = 12;
             this.label9.Text = "Gratuito";
 
-            // 
-            // label8
-            // 
+            
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -361,9 +321,7 @@ namespace Unreal_Store
             this.label8.TabIndex = 11;
             this.label8.Text = "3,99€";
 
-            // 
-            // label7
-            // 
+            
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -374,9 +332,7 @@ namespace Unreal_Store
             this.label7.TabIndex = 10;
             this.label7.Text = "9,99€";
 
-            // 
-            // label6
-            // 
+           
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -387,9 +343,7 @@ namespace Unreal_Store
             this.label6.TabIndex = 9;
             this.label6.Text = "19,99€";
 
-            // 
-            // label5
-            // 
+          
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -400,9 +354,7 @@ namespace Unreal_Store
             this.label5.TabIndex = 8;
             this.label5.Text = "Jogo Multi-jogador";
 
-            // 
-            // label4
-            // 
+           
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -413,9 +365,7 @@ namespace Unreal_Store
             this.label4.TabIndex = 7;
             this.label4.Text = "Point and Click 2D";
 
-            // 
-            // label3
-            // 
+          
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -426,9 +376,7 @@ namespace Unreal_Store
             this.label3.TabIndex = 6;
             this.label3.Text = "Jogo de Exploração";
 
-            // 
-            // label2
-            // 
+            
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -439,9 +387,7 @@ namespace Unreal_Store
             this.label2.TabIndex = 5;
             this.label2.Text = "Jogo de Ação";
 
-            // 
-            // button4
-            // 
+           
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button4.Image = global::Unreal_Store.Properties.Resources.multijogador;
             this.button4.Location = new System.Drawing.Point(547, 62);
@@ -451,9 +397,7 @@ namespace Unreal_Store
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.GameButton_Click);
 
-            // 
-            // button3
-            // 
+            
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button3.Image = global::Unreal_Store.Properties.Resources.pac2d;
             this.button3.Location = new System.Drawing.Point(373, 62);
@@ -463,9 +407,7 @@ namespace Unreal_Store
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.GameButton_Click);
 
-            // 
-            // button2
-            // 
+            
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.Image = global::Unreal_Store.Properties.Resources.jogoExploracao;
             this.button2.Location = new System.Drawing.Point(199, 62);
@@ -475,9 +417,7 @@ namespace Unreal_Store
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.GameButton_Click);
 
-            // 
-            // button1
-            // 
+          
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Image = global::Unreal_Store.Properties.Resources.jogoAcao;
             this.button1.Location = new System.Drawing.Point(25, 62);
@@ -487,9 +427,7 @@ namespace Unreal_Store
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.GameButton_Click);
 
-            // 
-            // Form3
-            // 
+            
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);

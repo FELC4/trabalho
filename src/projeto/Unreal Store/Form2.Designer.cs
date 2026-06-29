@@ -36,9 +36,7 @@
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
 
-            // 
-            // tableLayoutPanel
-            // 
+           
             this.tableLayoutPanel.ColumnCount = 3;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
