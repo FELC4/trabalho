@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\src\\projeto\\Unreal Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\src\\projeto\\Unreal Store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\src\\projeto\\unreal store\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|c:\\users\\2224102\\documents\\github\\trabalho\\src\\projeto\\unreal store\\accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|C:\\Users\\2224102\\Documents\\GitHub\\trabalho\\src\\projeto\\Unreal Store\\accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{357F0DA4-D701-467D-9090-C68AC1BAEB97}|Unreal Store.csproj|solutionrelative:accountstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -86,8 +86,7 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T08:04:29.324Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -99,8 +98,7 @@
               "RelativeToolTip": "Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T11:26:49.879Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -112,8 +110,7 @@
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T11:16:34.173Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -125,8 +122,7 @@
               "RelativeToolTip": "Form4.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-30T10:31:21.016Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "DatabaseHelper.cs",
               "ViewState": "AgIAABMCAAAAAAAAAAAcwGICAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-23T09:27:47.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-23T09:27:47.654Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "Properties\\Resources.resx",
               "ViewState": "AgIAAIMAAAAAAAAAAAAAALkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-05-21T07:57:46.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T07:57:46.664Z"
             },
             {
               "$type": "Document",
@@ -172,8 +166,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwJYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T08:11:36.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T08:11:36.257Z"
             },
             {
               "$type": "Document",
@@ -185,8 +178,7 @@
               "RelativeToolTip": "Form3.Designer.cs",
               "ViewState": "AgIAAAIBAAAAAAAAAAAowK0BAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T08:17:11.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T08:17:11.945Z"
             },
             {
               "$type": "Document",
@@ -198,8 +190,7 @@
               "RelativeToolTip": "Form4.cs",
               "ViewState": "AgIAACgBAAAAAAAAAAAAwIcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T10:35:19.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-30T10:35:19.989Z"
             },
             {
               "$type": "Document",
@@ -211,8 +202,7 @@
               "RelativeToolTip": "Form3.cs",
               "ViewState": "AgIAAOsBAAAAAAAAAAAswCIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T10:29:03.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-30T10:29:03.509Z"
             },
             {
               "$type": "Document",
@@ -224,8 +214,7 @@
               "RelativeToolTip": "Form2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:20:05.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:20:05.414Z"
             },
             {
               "$type": "Document",
@@ -237,8 +226,7 @@
               "RelativeToolTip": "Form4.Designer.cs",
               "ViewState": "AgIAADIBAAAAAAAAAAAowLkBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T08:17:22.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T08:17:22.866Z"
             },
             {
               "$type": "Document",
@@ -250,8 +238,7 @@
               "RelativeToolTip": "Form2.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:19:52.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:19:52.409Z"
             },
             {
               "$type": "Document",
@@ -263,8 +250,7 @@
               "RelativeToolTip": "AccountStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T11:19:31.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T11:19:31.533Z"
             },
             {
               "$type": "Document",
@@ -289,8 +275,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T08:41:25.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T08:41:25.991Z"
             }
           ]
         }
